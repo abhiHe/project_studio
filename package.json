@@ -1,0 +1,19 @@
+{
+  "name": "krimewatch-kwcommon-api",
+  "version": "1.0.0",
+  "description": "KrimeWatch kwcommon Node.js/Express API with Firestore",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "emulator": "firebase emulators:start --only firestore",
+    "dev:emulator": "FIRESTORE_EMULATOR_HOST=localhost:8080 USE_EMULATOR=true nodemon index.js",
+    "seed:emulator": "FIRESTORE_EMULATOR_HOST=localhost:8080 USE_EMULATOR=true node scripts/seed-emulator.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "mysql2": "^3.6.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^
