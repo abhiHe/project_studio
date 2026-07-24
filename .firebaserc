@@ -1,6 +1,0 @@
-{
-  "projects": {
-    "default": "krimewatch-emulator",
-    "production": "your-firebase-project-id"
-  }
-}
