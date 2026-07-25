@@ -93,7 +93,7 @@ export function Pricing() {
         </div>
 
         <Reveal className="mt-8 text-center text-xs text-muted">
-          Prices are indicative. Final quotes depend on scope and requirements.
+          Prices may vary depending on your project size and requirements.
         </Reveal>
       </div>
     </section>

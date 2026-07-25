@@ -195,10 +195,10 @@ export function Hero() {
             <MagneticButton className="btn-primary">
               Start Your Project <ArrowRight size={16} />
             </MagneticButton>
-            <MagneticButton className="btn-ghost">
+            <MagneticButton href="#services" className="btn-ghost">
               <Play size={14} /> Explore Services
             </MagneticButton>
-            <MagneticButton className="btn-ghost">Contact Us</MagneticButton>
+            <MagneticButton href="#contact" className="btn-ghost">Contact Us</MagneticButton>
           </motion.div>
 
           <motion.div

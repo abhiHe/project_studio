@@ -124,12 +124,17 @@ export function Counter({ to, suffix = '' }: { to: number; suffix?: string }) {
   );
 }
 
+type MagneticButtonProps =
+  | (React.ButtonHTMLAttributes<HTMLButtonElement> & { href?: undefined })
+  | (React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string });
+
 export function MagneticButton({
   children,
   className = '',
+  href,
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
-  const ref = useRef<HTMLButtonElement>(null);
+}: MagneticButtonProps) {
+  const ref = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
   const [pos, setPos] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const el = ref.current;
@@ -148,15 +153,36 @@ export function MagneticButton({
       el.removeEventListener('mouseleave', onLeave);
     };
   }, []);
+  const content = (
+    <>
+      {children}
+    </>
+  );
+
+  if (href) {
+    return (
+      <motion.a
+        ref={ref as React.Ref<HTMLAnchorElement>}
+        href={href}
+        animate={{ x: pos.x, y: pos.y }}
+        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+        className={className}
+        {...(props as any)}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
   return (
     <motion.button
-      ref={ref}
+      ref={ref as React.Ref<HTMLButtonElement>}
       animate={{ x: pos.x, y: pos.y }}
       transition={{ type: 'spring', stiffness: 200, damping: 15 }}
       className={className}
       {...(props as any)}
     >
-      {children}
+      {content}
     </motion.button>
   );
 }

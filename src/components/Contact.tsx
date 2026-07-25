@@ -174,19 +174,19 @@ export function Contact() {
               <div className="card-glow">
                 <h3 className="font-display text-lg font-semibold">Reach us directly</h3>
                 <div className="mt-4 space-y-3 text-sm">
-                  <a href="mailto:hello@projectnest.studio" className="flex items-center gap-3 text-muted hover:text-[rgb(var(--fg))]">
+                  <a href="mailto:projectstudio.offical03@gmail.com" className="flex items-center gap-3 text-muted hover:text-[rgb(var(--fg))]">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-royal-500/15 text-royal-400">
                       <Mail size={16} />
                     </span>
-                    hello@projectnest.studio
+                    projectstudio.offical03@gmail.com
                   </a>
-                  <a href="tel:+910000000000" className="flex items-center gap-3 text-muted hover:text-[rgb(var(--fg))]">
+                  <a href="tel:+917619161704" className="flex items-center gap-3 text-muted hover:text-[rgb(var(--fg))]">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-royal-500/15 text-royal-400">
                       <Phone size={16} />
                     </span>
-                    +91 00000 00000
+                    +91 76191 61704
                   </a>
-                  <a href="https://wa.me/910000000000" className="flex items-center gap-3 text-muted hover:text-[rgb(var(--fg))]">
+                  <a href="https://wa.me/917619161704" className="flex items-center gap-3 text-muted hover:text-[rgb(var(--fg))]">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-green-500/15 text-green-400">
                       <MessageCircle size={16} />
                     </span>
@@ -205,7 +205,7 @@ export function Contact() {
                 <div className="relative h-full min-h-[180px] w-full">
                   <iframe
                     title="map"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=77.5%2C12.9%2C77.7%2C13.1&layer=mapnik"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=77.478559,12.934903,77.498559,12.954903&layer=mapnik&marker=12.944903,77.488559"
                     className="h-full w-full grayscale"
                     loading="lazy"
                   />
